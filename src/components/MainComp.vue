@@ -42,4 +42,5 @@ export default {
 .copertina{
   display: inline-flex;
 }
+
 </style>

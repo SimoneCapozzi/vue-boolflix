@@ -71,6 +71,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/style/general';
 /* div, ul, li{
   background-color: brown;
 }
@@ -132,5 +133,5 @@ i {
   color: yellow;
 }
 
-@import '@/assets/style/general';
+
 </style>

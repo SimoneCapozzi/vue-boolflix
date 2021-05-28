@@ -1,37 +1,25 @@
 <template>
-  <header class="d-flex">
+  <header>
     <div>
-      <h1 class="ms-3">Boolflix</h1>
+      <h1>Boolflix</h1>
     </div>
-    <div class="search d-flex align-items-center">
+
+    <div>
       <input
         v-model.trim="textToSearch"
         placeholder="Cerca film o serie tv"
-        class="form-control"
+        class=""
         type="text"
         @keyup.enter="$emit('startSearch', { text: textToSearch, type: 'all' })"
       />
-      <div>
-        <button
-          @click="$emit('startSearch', { text: textToSearch, type: 'movie' })"
-          class=" ms-3"
-        >
-          CERCA FILM
-        </button>
-      </div>
-      <div>
-        <button
-          @click="$emit('startSearch', { text: textToSearch, type: 'tv' })"
-          class=" ms-3 me-3"
-        >
-          CERCA SERIE
-        </button>
-      </div>
-      <!-- <div>
-          <button 
-          @click="$emit('startSearch',{text:textToSearch, type:'all'})"
-          class="btn btn-primary ms-3">CERCA TUTTO</button>
-        </div> -->
+
+      <button
+       @click="$emit('startSearch',{text:textToSearch, type:'movie'})"
+       class="ms-3">Cerca Film</button>
+
+      <button
+      @click="$emit('startSearch', { text: textToSearch, type: 'tv' })"
+      class="ms-3 me-3">Cerca serie tv</button>
     </div>
   </header>
 </template>
@@ -48,29 +36,42 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header {
+
+header{
   display: flex;
+  align-items: center;
   justify-content: space-between;
   height: 70px;
-  background-color: black;
+  background-color: black ;
+  border-bottom: 3px solid red;
 }
 
 h1{
-  margin-top: 10px;
+  margin-left: 10px;
   color: red;
+}
+
+input{
+ outline:none;
 }
 
 button {
   background-color: red;
-  border-color: red;
+  border: none;
   color: black;
   border-radius: 5px;
   padding: 5px;
   &:hover {
     color: red;
     background-color: black;
-    border-color: red;
+    border: 1px solid red;
     border-radius: 5px;
   }
-}
+} 
+
+
+
+
+
+
 </style>
