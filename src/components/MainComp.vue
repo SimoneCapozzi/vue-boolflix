@@ -1,11 +1,17 @@
 <template>
   <main class="container">
-    <h1>{{ titles[type] }}</h1>
-    <CardFilm
-      v-for="card in list"
-      :key="card.id"
-      :card="card"
-     />
+    <div>
+      <h1>{{ titles[type] }}</h1>
+    </div>
+
+    <div class="copertina">
+      <CardFilm
+        v-for="card in list"
+        :key="card.id"
+        :card="card"
+      />
+    </div>
+
   </main>
 </template>
 
@@ -32,4 +38,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.copertina{
+  display: inline-flex;
+}
 </style>
