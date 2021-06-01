@@ -26,8 +26,7 @@
         <div class="flip-card-front">
           <img
             :src="'https://image.tmdb.org/t/p/w300' + card.poster_path"
-            alt=""
-            style="width:300px;height:400px;"
+            alt="card.title || card.name"
           />
         </div>
         <div class="flip-card-back">
@@ -72,21 +71,12 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/style/general';
-/* div, ul, li{
-  background-color: brown;
-}
 
-div{
-  margin-bottom: 20px;
-}
-i{
-  display: inline-block;
-} */
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 400px;
+  width: 342px;
+  height: 513px;
   perspective: 1000px;
 }
 
@@ -111,19 +101,26 @@ i{
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  border: 1px solid white;
+  img{
+    width: 50px;
+    width: 100%;
+  }
 }
 
 .flip-card-front {
   background-color: #bbb;
   color: black;
+  
 }
+
 
 .flip-card-back {
   overflow-y: auto;
   background-color: black;
   color: white;
   transform: rotateY(180deg);
-
+  padding: 10px;
 }
 
 .star {

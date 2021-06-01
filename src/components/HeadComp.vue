@@ -53,6 +53,7 @@ h1{
 
 input{
  outline:none;
+ background-color: white;
 }
 
 button {

@@ -39,6 +39,10 @@ export default {
 
 <style lang="scss" scoped>
 
+.container{
+  overflow-x: scroll;
+}
+
 .copertina{
   display: inline-flex;
 }
